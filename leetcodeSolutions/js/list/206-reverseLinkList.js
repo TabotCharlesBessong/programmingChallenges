@@ -1,26 +1,21 @@
+const reverseList = (n) => {
+  let prev = null, curr = head, next = null;
 
-// const reverseList = (head) => {
-//   let newHead = null
-//   let temp = null
-//   // reverve a single linked list
-//   while (head) {
-//     temp = head.next
-//     head.next = newHead
-//     newHead = head
-//     head = temp
-//   }
-//   return newHead
-// }
+  while (curr) {
+    next = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = next;
+  }
 
-const reverseList = (head) => {
-  return reverse(null,head)
+  return prev;
 }
 
-const reverve = (newHead,head) => {
-  if(head === null) return newHead
-  let temp = head.next
-  head.next = reverve(newHead,temp)
-  return head
-}
+const reorderList = (head) => {
+  if(!head) return null
 
-// console.log(reverseList(1->2->3))
+  // point head to the rest of the list removed
+  head.next = reverseList(head.next)
+
+  reorderList(head.next)
+}
