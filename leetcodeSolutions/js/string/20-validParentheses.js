@@ -21,32 +21,37 @@ const isValid = (inputString) => {
   return !expectedBrackets.length
 }
 
-const isValid =  (inputString)=> {
-  // Initialise an array to store the closing brackets expected
-  let expectedBrackets = [];
+// const isValid =  (inputString)=> {
+//   // Initialise an array to store the closing brackets expected
+//   let expectedBrackets = [];
 
-  // Loop through the letters in the input string
-  for (let letter = 0; letter < inputString.length; letter++) {
-    switch (inputString[letter]) {
-      // Push the closing equivelant of any open brackets found
-      case '{': {
-        expectedBrackets.push('}');
-        break;
-      }
-      case '[': {
-        expectedBrackets.push(']');
-        break;
-      }
-      case '(': {
-        expectedBrackets.push(')');
-        break;
-      }
-      // If a close bracket is found, check that it matches the last stored open bracket
-      default: {
-        if (expectedBrackets.pop() !== inputString[letter]) {
-            return false;
-        }
-      }
-    }
-  }
-}
+//   // Loop through the letters in the input string
+//   for (let letter = 0; letter < inputString.length; letter++) {
+//     switch (inputString[letter]) {
+//       // Push the closing equivelant of any open brackets found
+//       case '{': {
+//         expectedBrackets.push('}');
+//         break;
+//       }
+//       case '[': {
+//         expectedBrackets.push(']');
+//         break;
+//       }
+//       case '(': {
+//         expectedBrackets.push(')');
+//         break;
+//       }
+//       // If a close bracket is found, check that it matches the last stored open bracket
+//       default: {
+//         if (expectedBrackets.pop() !== inputString[letter]) {
+//             return false;
+//         }
+//       }
+//     }
+//   }
+//   return true
+// }
+
+const inputString = '({[]})[';
+const result = isValid(inputString);
+console.log(result); // Output: true
