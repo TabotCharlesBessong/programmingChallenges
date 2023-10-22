@@ -36,3 +36,13 @@ const merge = (nums1,m,nums2,n)=>{
     nums1[k] = result[k]
   }
 }
+
+const nums1 = [1, 2, 3, 0, 0, 0]; // Sorted array with additional space for merging
+const m = 3; // Number of elements in nums1
+
+const nums2 = [2, 5, 6]; // Sorted array
+const n = 3; // Number of elements in nums2
+
+merge(nums1, m, nums2, n);
+
+console.log(nums1);
