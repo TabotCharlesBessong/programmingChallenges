@@ -28,6 +28,7 @@ const maxArea =  (height) => {
   // Run until the left and right markers meet
   while (left < right) {
     // Set the maximum height of the current area
+    // we can't use Math.max because they will be an outbound
     const maxHeight = Math.min(height[left], height[right]);
 
     // Calculate the current area

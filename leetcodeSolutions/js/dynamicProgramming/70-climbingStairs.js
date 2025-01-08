@@ -7,4 +7,4 @@ const climbStairs = (n) => {
   return dp[1]
 }
 
-console.log(climbStairs(6))
+console.log(climbStairs(5))

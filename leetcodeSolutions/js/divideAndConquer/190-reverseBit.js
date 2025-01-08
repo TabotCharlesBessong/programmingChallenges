@@ -15,4 +15,4 @@ var reverseBits = function (n) {
   return count;
 };
 
-console.log(reverseBits(11111111111111111111111111111101));
+console.log(reverseBits(1101));
